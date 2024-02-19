@@ -1,21 +1,11 @@
-# Challenge: Count Vowels
+# چالش: شمارش حروف صداگذار
 
-## Instructions
+## دستورالعمل‌ها
 
-Write a function called `countVowels` that takes in a string and returns the number of vowels in the string.
+تابعی به نام `countVowels` بنویسید که یک رشته را دریافت کرده و تعداد حروف صداگذار را در رشته برمی‌گرداند.
 
-### Function Signature
 
-```js
-/**
- * Returns the number of vowels in a string.
- * @param {string} str - The string to search.
- * @returns {number} - The number of vowels in the string.
- */
-function countVowels(str: string): number;
-```
-
-### Examples
+### مثال‌ها
 
 ```js
 countVowels('hello'); // 2
@@ -23,17 +13,17 @@ countVowels('why'); // 0
 countVowels('mississippi'); // 4
 ```
 
-### Constraints
+### محدودیت‌ها
 
-- It shouldn't matter if the input string is uppercase or lowercase
+- مهم نیست که رشته ورودی حروف بزرگ یا کوچک باشد.
 
-### Hints
+### راهنمایی‌ها
 
 
-## Solutions
+## راه‌حل‌ها
 
 <details>
-  <summary>Click For Solution</summary>
+  <summary>برای دیدن راه‌حل کلیک کنید</summary>
 
 ```js
 function countVowels(str) {
@@ -58,19 +48,19 @@ function countVowels(str) {
 }
 ```
 
-## Explanation
+## توضیحات
 
-- Make the string lowercase. This is because we want to count both uppercase and lowercase vowels.
-- Create a variable called `count` and set it to `0`. This is the variable we will use to keep track of how many vowels we have found.
-- Create a `for` loop that will loop through each character in the string. We then create a variable called `char` and set it to the current character in the string.
-- Check if the character is a vowel. If it is, we increment `count` by `1`. Once we have looped through the entire string, we return `count`.
+- رشته را به حالت کوچک تبدیل کنید. این به دلیل این است که ما می‌خواهیم هم حروف بزرگ و هم حروف کوچک را بشماریم.
+- یک متغیر به نام `count` ایجاد کنید و آن را برابر `0` قرار دهید. این متغیری است که برای ردیابی تعداد حروف صداگذار که پیدا کرده‌ایم استفاده می‌شود.
+- یک حلقه `for` بسازید که از هر حرف در رشته عبور می‌کند. سپس یک متغیر به نام `char` ایجاد کرده و آن را برابر حرف فعلی در رشته قرار دهید.
+- بررسی کنید که آیا حرف یک حرف صداگذار است یا خیر. اگر بله، `count` را با `1` افزایش دهید. بعد از اینکه از کل رشته عبور کرده‌ایم، `count` را برمی‌گردانیم.
 
 </details>
 
-### Test Cases
+### موارد آزمون
 
 ```js
-test('Counting vowels in a string', () => {
+test('شمارش حروف صداگذار در یک رشته', () => {
   expect(countVowels('Hello, World!')).toBe(3);
   expect(countVowels('JavaScript')).toBe(3);
   expect(countVowels('OpenAI Chatbot')).toBe(6);
